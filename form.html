@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+      (function () {
+   
+    emailjs.init("kRuNJU84zP0dy9I_K"); // Replace with your EmailJS user ID
+})();
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const serviceID = "service_ybu64by"; // Replace with your service ID
+    const templateID = "template_et0biav"; // Replace with your template ID
+
+    // Send the form using EmailJS
+    emailjs.sendForm(serviceID, templateID, event.target)
+        .then(() => {
+            alert("Your email has been sent successfully!");
+            document.getElementById("contactForm").reset(); 
+        })
+        .catch((error) => {
+            alert("There was an error sending your email. Please try again later.");
+            console.error("EmailJS Error:", error);
+        });
+}
+
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm" onsubmit="sendEmail(event)">
+            <!-- Sender's Name -->
+            <div class="form-group">
+                <label for="from_name">Your Name</label>
+                <input type="text" id="from_name" name="from_name" placeholder="Enter your name" required />
+            </div>
+        
+            <!-- Sender's Email -->
+            <div class="form-group">
+                <label for="user_email">Your Email</label>
+                <input type="email" id="user_email" name="user_email" placeholder="Enter your email" required />
+            </div>
+        
+            <!-- Message -->
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </div>
+        
+            <!-- Submit -->
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

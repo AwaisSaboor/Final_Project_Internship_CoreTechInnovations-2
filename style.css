@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+   
+
+}
+
+/* home 1 css start from here ===================================================================================== */
+
+
+/* section 1 start from here  */
+
+#section-1 {
+    background-image: url(images/section1-back.webp);
+    object-fit: cover;
+    background-position: center;
+
+}
+
+#sec-1-btn {
+    position: relative;
+    z-index: 2;
+}
+
+#empty-color {
+    position: relative;
+    top: -34px;
+    right: -6px;
+    z-index: 1;
+}
+
+/* section 2 start from here  */
+
+#antique-font{
+    font-family: "Bacasime Antique", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+/* section 3 start from here  */
+
+#section-3 p{
+    position: relative;
+    top: -12rem;
+    color: white;
+
+}
+
+
+/* section 5 start from here  */
+
+.section-5{
+    background-image: url(images/Asset_6_1920x.png);
+    object-fit: cover;
+    background-position: center;
+}
+
+.section-11{
+    background-image: url(images/Asset_6_1920x.png);
+}
+
+
+/* HOME css start from here ======================================================================================= */
+
+.section-1{
+    background-image: url(images/section1-back.webp);
+    background-position: center;
+    object-fit: cover;
+    
+}
+.section-5-Home{
+    background-image: url(images/Asset_6_1920x.png);
+    object-fit: cover;
+    background-position: center;
+}
+#footer-email{
+    border: none;
+    width: 160px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 1.1rem;
+}
+
+#footer-btn{
+    border: none;
+    width: 120px;
+    height: 50px;
+    position: relative;
+    top: -2px;
+    background-color: #6B1229;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    padding-bottom: 4px;
+}
+.img-spinner img{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 0;
+    top: 520px;
+   
+ }
+
+ .five-logo-img img{
+    object-fit: contain;
+    
+ }
+/* Keyframes start from here ============================================================ */
+  
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+}
+
+
+/* juice shop css  */
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .price-range input {
+    width: 80px;
+    height: 60px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #b4b3b3;
+    color:rgb(88, 88, 88);
+   
+    font-weight: bold;
+  }
+  .price-range span {
+    font-size: 16px;
+    color: #333;
+  }
+
+
+
+  .wrap{
+
+    border: 1px solid rgb(75, 75, 75);
+    display: inline-block;
+    padding-left:2px ;
+    padding-right:2px ;
+   
+}
+.menu{
+    width: 20px;
+    height: 5px;
+    background: #747373;
+    margin: 3px 0;
+
+}
+
+#div2{
+    display: none;
+}
+
+#div3{
+    display: none;
+}
